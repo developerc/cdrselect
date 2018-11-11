@@ -1,0 +1,6 @@
+Устанавливал H2:
+http://www.h2database.com/html/download.html
+скачал по ссылке Platform-Independent Zip
+перенес в папку /bin   распаковал
+файлу h2/bin/h2.sh назначил права на запуск всеми, запустил
+saperov@saperov-P85-D3 ~/bin/h2/bin $ ./h2.sh
