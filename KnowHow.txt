@@ -4,3 +4,6 @@ http://www.h2database.com/html/download.html
 перенес в папку /bin   распаковал
 файлу h2/bin/h2.sh назначил права на запуск всеми, запустил
 saperov@saperov-P85-D3 ~/bin/h2/bin $ ./h2.sh
+в открывшемся браузере:
+Сохранить настройки: Generic H2(Server)
+Имя настройки: Generic H2(Server)
