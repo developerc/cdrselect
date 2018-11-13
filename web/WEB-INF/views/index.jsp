@@ -13,6 +13,9 @@
 <li>
     <a href="http://localhost:8080/setaccount">Зарегистрировать пользователя</a>
 </li>
+<li>
+    <a href="http://localhost:8080/setadmin">Зарегистрировать администратора</a>
+</li>
 
 </body>
 </html>

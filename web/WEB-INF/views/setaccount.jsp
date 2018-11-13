@@ -12,7 +12,7 @@
 <body>
 
 <div class="container">
-    <h2>Страница добавления аккаунта</h2>
+    <h2>Добавление аккаунта под админом</h2>
     <label id="errLabel"></label>
     <form >
         <div class="form-group">
@@ -31,9 +31,11 @@
             <label for="prefix">Префикс базы данных:</label>
             <input type="prefix" class="form-control" id="prefix" placeholder="Префикс базы данных" name="prefix">
         </div>
-
-        <%--<div class="checkbox">
-            <label><input type="checkbox" name="remember"> Remember me</label>
+        <%--<div class="form-group">
+        <select id="role">
+            <option value="user">USER</option>
+            <option value="admin">ADMIN</option>
+        </select>
         </div>--%>
         <button type="button" onclick="RegNewUser()" class="btn btn-default">Зарегистрировать</button>
         <button type="button" onclick="ValidLgn()" class="btn btn-default">Валидация логина</button>
@@ -47,6 +49,7 @@
     var criptPwd = '';
     var prfx = '';
     var arrUsers = [];
+    var roleSelect = document.getElementById('role');
 
     var RegNewUser = function () {
         lgn = $("#username").val();
@@ -58,6 +61,11 @@
         if (pwd1 == pwd2){
             console.log('validation cuccesful, add new user into base');
             GetArrUsers();
+            /*if (roleSelect.value == 'user') {
+                GetArrUsers();
+            } else {
+                $('#errLabel').text('это админ');
+            }*/
         } else {
             console.log('validation not cuccesful');
             $('#errLabel').text('Пароль повторен не точно!');

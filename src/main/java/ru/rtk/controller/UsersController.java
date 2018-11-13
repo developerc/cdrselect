@@ -14,9 +14,15 @@ public class UsersController {
     @Autowired
     private UsersService usersService;
 
-    @RequestMapping(value = "/add", method = RequestMethod.POST, produces = "application/json;charset=utf-8")
+    @RequestMapping(value = "/add/usr", method = RequestMethod.POST, produces = "application/json;charset=utf-8")
     @ResponseBody
     public Users addUsers(@RequestBody Users users){
+        return usersService.addUsers(users);
+    }
+
+    @RequestMapping(value = "/add/adm", method = RequestMethod.POST, produces = "application/json;charset=utf-8")
+    @ResponseBody
+    public Users addAdmin(@RequestBody Users users){
         return usersService.addUsers(users);
     }
 

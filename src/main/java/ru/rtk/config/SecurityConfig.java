@@ -23,8 +23,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/").permitAll()
                 .antMatchers("/setaccount").permitAll()
-                .antMatchers("/cdr").access("hasRole('USER')")
-                .antMatchers("/cdr/**").access("hasRole('USER')")
+                .antMatchers("/users/add/adm").permitAll()
+                .antMatchers("/users/add/usr").access("hasRole('ADMIN')")
+
+                .antMatchers("/cdr").access("hasRole('USER') or hasRole('ADMIN')")
+                .antMatchers("/cdr/**").access("hasRole('USER') or hasRole('ADMIN')")
 //                .antMatchers("/statistika/**").access("hasRole('USER') or hasRole('ADMIN')")
                 .and()
                 .csrf().disable()

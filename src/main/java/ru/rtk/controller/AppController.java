@@ -19,4 +19,9 @@ public class AppController {
     public String setaccountPage(){
         return "setaccount";
     }
+
+    @RequestMapping("/setadmin")
+    public String setadminPage(){
+        return "setadmin";
+    }
 }
