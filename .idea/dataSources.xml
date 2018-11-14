@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="jdbc:h2:tcp://localhost/~/test" uuid="4e062a02-ffc1-4760-b9fa-12665c17a473">
+    <data-source source="LOCAL" name="jdbc:h2:tcp://localhost/~/test" uuid="af2365df-3855-4e5a-a397-93f02750d45e">
       <driver-ref>h2.unified</driver-ref>
       <synchronize>true</synchronize>
       <configured-by-url>true</configured-by-url>

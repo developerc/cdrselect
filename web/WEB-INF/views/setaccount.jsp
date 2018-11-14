@@ -107,16 +107,16 @@
         };
         $.ajax({
             type: 'POST',
-            url: service + "users/add",
+            url: service + "users/add/usr",
             contentType: 'application/json;charset=utf-8',
             data: JSON.stringify(objNewUser),
             dataType: 'json',
             async: false,
             success: function (result) {
                 console.log('Success add new user');
-                $('#errLabel').text('Пользователь успешно зарегистрирован!');
+                $('#errLabel').text('Пользователь ' + lgn + ' успешно зарегистрирован!');
                 $('#errLabel').css("color", "green");
-                AuthUser();
+                // AuthUser();
             },
             error: function (jqXHR, testStatus, errorThrown) {
                 console.log('Failed add new user');

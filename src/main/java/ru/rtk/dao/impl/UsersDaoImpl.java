@@ -17,4 +17,11 @@ public class UsersDaoImpl extends BasicDaoImpl<Users> implements UsersDao {
         query.setParameter("Lgn", lgn);
         return query.getResultList();
     }
+
+    @Override
+    public List<Users> getAdminAll() {
+        Query query = getSessionFactory().createQuery("SELECT a FROM Users as a WHERE (a.role_name = 'ROLE_ADMIN')");
+//        query.setParameter("Role", 'ROLE_ADMIN');
+        return query.getResultList();
+    }
 }

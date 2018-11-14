@@ -65,4 +65,10 @@ public class UsersController {
     public List<Users> getUsersByLgn(@PathVariable(value = "lgn") String lgn){
         return usersService.getUsersByLgn(lgn);
     }
+
+    @RequestMapping(value = "/getadminall", method = RequestMethod.GET, produces = "application/json;charset=utf-8")
+    @ResponseBody
+    public List<Users> getAdminAll(){
+        return usersService.getAdminAll();
+    }
 }

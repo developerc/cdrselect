@@ -50,5 +50,12 @@ public interface UsersService {
      * @return all Users by login
      */
     List<Users> getUsersByLgn(String lgn);
+
+    /**
+     * method for receiving all users by role_name = ROLE_ADMIN
+     *
+     * @return all Users by this role_name
+     */
+    List<Users> getAdminAll();
 }
 

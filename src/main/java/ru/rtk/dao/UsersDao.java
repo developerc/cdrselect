@@ -11,4 +11,10 @@ public interface UsersDao extends BasicDao<Users>{
      *@return List users  with success parameters
      * **/
     List<Users> getUsersByLgn(String lgn);
+
+    /**
+     * method for finding List Users of all Admin
+     *@return List users  with ADMIN role
+     * **/
+    List<Users> getAdminAll();
 }

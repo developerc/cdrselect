@@ -48,5 +48,10 @@ public class UsersServiceImpl implements UsersService {
     public List<Users> getUsersByLgn(String lgn) {
         return usersDao.getUsersByLgn(lgn);
     }
+
+    @Override
+    public List<Users> getAdminAll() {
+        return usersDao.getAdminAll();
+    }
 }
 
